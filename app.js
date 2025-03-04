@@ -6,11 +6,22 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 
 const usersRoute = require('./routes/users');
+//const uploadMusics = require("./utils/uploadMusics");
+
+/*setTimeout(() => {
+    console.log("LOADING: Preparando para subir as músicas");
+    uploadMusics.upload();
+}, 1000)*/
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
+
+app.use(cors({
+    origin: process.env.URL_SITE, // Remova a barra extra no final
+    credentials: true // Permite envio de cookies/sessão
+}));
+
 require('dotenv').config();
 
 app.use((req, res, next) => {
@@ -29,7 +40,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/users', usersRoute);
+app.use('/usuarios', usersRoute);
 
 app.use('/public', express.static('public'));
 
