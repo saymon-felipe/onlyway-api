@@ -10,7 +10,7 @@ const uploadMusics = require("./utils/uploadMusics");
 
 setTimeout(() => {
     console.log("LOADING: Preparando para subir as músicas");
-    //uploadMusics.upload();
+    uploadMusics.upload();
 }, 1000)
 
 app.use(morgan('dev'));
