@@ -208,6 +208,67 @@ let userService = {
                 reject(error);
             })
         })
+    },
+    toggleStarMusic: function (musicTitle, user_id) {
+        return new Promise((resolve, reject) => {
+            functions.executeSql(
+                `
+                    SELECT
+                        *
+                    FROM
+                        musicas_curtidas
+                    WHERE
+                        id_musica = (SELECT id FROM musicas WHERE identifier = ?)
+                    AND
+                        id_usuario = ?
+                `, [musicTitle, user_id]
+            ).then((results) =>{
+                if (results.length > 0) {
+                    functions.executeSql(
+                        `
+                            DELETE FROM
+                                musicas_curtidas
+                            WHERE
+                                id_musica = (SELECT id FROM musicas WHERE identifier = ?)
+                            AND
+                                id_usuario = ?
+                        `, [musicTitle, user_id]
+                    ).then(() => {
+                        resolve();
+                    })
+                } else {
+                    functions.executeSql(
+                        `
+                            INSERT INTO
+                                musicas_curtidas
+                                (id_musica, id_usuario)
+                            VALUES
+                                ((SELECT id FROM musicas WHERE identifier = ?), ?)
+                        `, [musicTitle, user_id]
+                    ).then(() => {
+                        resolve();
+                    })
+                }
+            })
+        })
+    },
+    getFavoritedMusics: function (user_id) {
+        return new Promise((resolve, reject) => {
+            functions.executeSql(
+                `
+                    SELECT
+                        m.identifier
+                    FROM
+                        musicas m
+                    INNER JOIN
+                        musicas_curtidas mc ON mc.id_musica = m.id
+                    WHERE
+                        mc.id_usuario = ?
+                `, [user_id]
+            ).then((results) => {
+                resolve(results);
+            })
+        })
     }
 }
 
