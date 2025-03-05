@@ -234,6 +234,8 @@ let userService = {
                                 id_usuario = ?
                         `, [musicTitle, user_id]
                     ).then(() => {
+                        this.getFavoritedMusics(user_id, true);
+                        this.getMusics(user_id, true);
                         resolve();
                     })
                 } else {
@@ -246,13 +248,15 @@ let userService = {
                                 ((SELECT id FROM musicas WHERE identifier = ?), ?)
                         `, [musicTitle, user_id]
                     ).then(() => {
+                        this.getFavoritedMusics(user_id, true);
+                        this.getMusics(user_id, true);
                         resolve();
                     })
                 }
             })
         })
     },
-    getFavoritedMusics: function (user_id) {
+    getFavoritedMusics: function (user_id, clearCache = false) {
         return new Promise((resolve, reject) => {
             functions.executeSql(
                 `
@@ -264,10 +268,48 @@ let userService = {
                         musicas_curtidas mc ON mc.id_musica = m.id
                     WHERE
                         mc.id_usuario = ?
-                `, [user_id]
+                `, [user_id], !clearCache, 60
             ).then((results) => {
                 resolve(results);
             })
+        })
+    },
+    getMusics: function (user_id, clearCache = false) {
+        return new Promise((resolve, reject) => {
+            functions.executeSql(
+                `
+                    SELECT
+                        m.id,
+                        m.nome AS title,
+                        m.artista AS author,
+                        (SELECT EXISTS (
+                            SELECT
+                                1
+                            FROM
+                                musicas_curtidas mc 
+                            WHERE
+                                mc.id_musica = m.id
+                            AND
+                                mc.id_usuario = ${user_id}
+                        )) AS starred,
+                        m.ano AS year
+                    FROM
+                        musicas m
+                `, [], !clearCache, 60
+            ).then((results) => {
+                resolve(results);
+            })
+        })
+    },
+    insertContact: function (mensagem, motivo, email, nome) {
+        return new Promise((resolve, reject) => {
+            let mailStringAdmin = emailTemplates.contactReceived(mensagem, motivo, email, nome);
+            sendEmails.sendEmail(mailStringAdmin, `MENSAGEM DE OUVINTE: ${nome} entrou em contato.`, process.env.USER_EMAIL, process.env.USER_EMAIL).then(() => {
+                let mailStringUser = emailTemplates.contactReceivedResponse(mensagem, motivo, email, nome);
+                sendEmails.sendEmail(mailStringUser, `Olá ${nome}, sua mensagem foi recebida e retornaremos em breve.`, process.env.USER_EMAIL, email).then(() => {
+                    resolve();
+                });
+            });
         })
     }
 }

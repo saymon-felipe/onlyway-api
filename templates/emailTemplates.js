@@ -1,10 +1,15 @@
 require('dotenv').config();
-let requestToCompanyHtml = require("./html/request-to-company");
+let contactReceived = require("./html/contactReceived");
+let contactReceivedResponse = require("./html/contactReceivedResponse");
 
 let templates = {
-    requestToCompany: function (company_name, temporary_password, user_email) {
-        let email = requestToCompanyHtml.replace(/{company}/g, company_name).replace("{temporary_password}", temporary_password).replace("{email}", user_email);
-        return email;
+    contactReceived: function (mensagem, motivo, email, nome) {
+        let emailHtml = contactReceived.replace("{mensagem}", mensagem).replace("{motivo}", motivo).replace("{email}", email).replace("{nome}", nome);
+        return emailHtml;
+    },
+    contactReceivedResponse: function (mensagem, motivo, email, nome) {
+        let emailHtml = contactReceivedResponse.replace("{mensagem}", mensagem).replace("{motivo}", motivo).replace("{email}", email).replace("{nome}", nome);
+        return emailHtml;
     }
 }
 

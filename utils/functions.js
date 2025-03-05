@@ -10,7 +10,7 @@ let functions = {
         return new Promise((resolve, reject) => {
             let cacheKey = query + JSON.stringify(queryParams);
             const cachedResult = cache.get(cacheKey);
-            console.log(cacheKey)
+            
             if (useCache && cachedResult !== undefined) {
                 queriesServedByCache++;
                 resolve(cachedResult);

@@ -6,6 +6,22 @@ const functions = require("../utils/functions");
 const axios = require("axios");
 const jwt = require('jsonwebtoken');
 
+function returnUserId(req) {
+    let token = req.headers.authorization?.split(" ")[1];
+
+    let decode = {
+        id: 0
+    }
+
+    if (token) {
+        decode = jwt.verify(token, process.env.JWT_KEY);
+    }
+
+    const idUsuario = decode.id || 0;
+
+    return idUsuario;
+}
+
 router.post("/google-login", async (req, res) => {
     const { token } = req.body;
 
@@ -75,7 +91,7 @@ router.post("/google-login", async (req, res) => {
 });
 
 router.post("/toggle-star-music", login, (req, res, next) => {
-    _usersService.toggleStarMusic(req.body.music.author + " - " + req.body.music.title, req.usuario.id).then(() => {
+    _usersService.toggleStarMusic(req.body.music.author + " - " + req.body.music.title, req.usuario.id || 0).then(() => {
         let response = functions.createResponse("Ação realizada com sucesso", null, "POST", 200);
         return res.status(200).send(response);
     }).catch((error) => {
@@ -83,9 +99,27 @@ router.post("/toggle-star-music", login, (req, res, next) => {
     })
 })
 
-router.get("/get-favorited-musics", login, (req, res, next) => {
-    _usersService.getFavoritedMusics(req.usuario.id).then((results) => {
+router.get("/get-favorited-musics", (req, res, next) => {
+    _usersService.getFavoritedMusics(returnUserId(req)).then((results) => {
         let response = functions.createResponse("Retorno das músicas favoritadas", results, "GET", 200);
+        return res.status(200).send(response);
+    }).catch((error) => {
+        return res.status(500).send(error);
+    })
+})
+
+router.get("/get-musics", (req, res, next) => {
+    _usersService.getMusics(returnUserId(req)).then((results) => {
+        let response = functions.createResponse("Retorno das músicas", results, "GET", 200);
+        return res.status(200).send(response);
+    }).catch((error) => {
+        return res.status(500).send(error);
+    })
+})
+
+router.post("/contact", (req, res, next) => {
+    _usersService.insertContact(req.body.mensagem, req.body.motivo, req.body.email, req.body.nome).then((results) => {
+        let response = functions.createResponse("Retorno das músicas", results, "GET", 200);
         return res.status(200).send(response);
     }).catch((error) => {
         return res.status(500).send(error);
