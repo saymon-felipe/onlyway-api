@@ -56,9 +56,9 @@
         "genre": "Unknown Genre"
     },
     {
-        "file_name": "Adhemar De Campos - Pela Fe.mp3",
+        "file_name": "Adhemar De Campos - Pela Fé.mp3",
         "artist": "Adhemar De Campos",
-        "title": "Pela Fe",
+        "title": "Pela Fé",
         "album": "Adhemar De Campos",
         "year": 2008,
         "genre": "Other"
@@ -83,7 +83,7 @@
         "file_name": "Adoração E Adoradores - Faz Chover.mp3",
         "artist": "Adoração E Adoradores",
         "title": "Faz Chover",
-        "album": "Adoracao E Adoradores",
+        "album": "Adoração E Adoradores",
         "year": 2003,
         "genre": "ADORACAO"
     },
@@ -91,7 +91,7 @@
         "file_name": "Adoração Tchê - Olhe Pra Jesus.mp3",
         "artist": "Adoração Tchê",
         "title": "Olhe Pra Jesus",
-        "album": "Adoracao Tche",
+        "album": "Adoração Tchê",
         "year": null,
         "genre": "Other"
     },
@@ -108,6 +108,38 @@
         "artist": "Alex Gonzaga",
         "title": "Do Jeito Que Eu Sou",
         "album": "Alex Gonzaga",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Aline Barros - Jesus Cristo Mudou Meu Viver.mp3",
+        "artist": "Aline Barros",
+        "title": "Jesus Cristo Mudou Meu Viver",
+        "album": "Aline Barros",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Aline Barros - Rendido Estou Ao Vivo.mp3",
+        "artist": "Aline Barros",
+        "title": "Rendido Estou Ao Vivo",
+        "album": "Aline Barros",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Aline Barros - Sonda-Me Usa-Me.mp3",
+        "artist": "Aline Barros",
+        "title": "Sonda-Me Usa-Me",
+        "album": "Aline Barros",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Aline Barros - Te Adorar E Meu Prazer.mp3",
+        "artist": "Aline Barros",
+        "title": "Te Adorar E Meu Prazer",
+        "album": "Aline Barros",
         "year": null,
         "genre": "Unknown Genre"
     },
@@ -155,7 +187,7 @@
         "file_name": "Ana Nóbrega - Oceanos.mp3",
         "artist": "Ana Nóbrega",
         "title": "Oceanos",
-        "album": "Ana Nobrega",
+        "album": "Ana Nóbrega",
         "year": 2015,
         "genre": "Blues"
     },
@@ -163,7 +195,7 @@
         "file_name": "Ana Nóbrega - Oh Quão Lindo Esse Nome É.mp3",
         "artist": "Ana Nóbrega",
         "title": "Oh Quão Lindo Esse Nome É",
-        "album": "Ana Nobrega",
+        "album": "Ana Nóbrega",
         "year": null,
         "genre": "Other"
     },
@@ -192,22 +224,6 @@
         "genre": "Unknown Genre"
     },
     {
-        "file_name": "Andre E Felipe - Deus Tremendo.mp3",
-        "artist": "Andre E Felipe",
-        "title": "Deus Tremendo",
-        "album": "Andre E Felipe",
-        "year": 2015,
-        "genre": "Unknown Genre"
-    },
-    {
-        "file_name": "Andre E Felipe - Ninguém Vai Para Um Adorador.mp3",
-        "artist": "Andre E Felipe",
-        "title": "Ninguém Vai Para Um Adorador",
-        "album": "Andre E Felipe",
-        "year": 2013,
-        "genre": "Unknown Genre"
-    },
-    {
         "file_name": "Andre Valadao - Mergulhar.mp3",
         "artist": "Andre Valadao",
         "title": "Mergulhar",
@@ -216,10 +232,26 @@
         "genre": "Other"
     },
     {
+        "file_name": "André E Felipe - Deus Tremendo.mp3",
+        "artist": "André E Felipe",
+        "title": "Deus Tremendo",
+        "album": "André E Felipe",
+        "year": 2015,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "André E Felipe - Ninguém Vai Para Um Adorador.mp3",
+        "artist": "André E Felipe",
+        "title": "Ninguém Vai Para Um Adorador",
+        "album": "André E Felipe",
+        "year": 2013,
+        "genre": "Unknown Genre"
+    },
+    {
         "file_name": "André Valadão - Abra Os Olhos Do Meu Coração.mp3",
         "artist": "André Valadão",
         "title": "Abra Os Olhos Do Meu Coração",
-        "album": "Andre Valadao",
+        "album": "André Valadão",
         "year": 2015,
         "genre": "Blues"
     },
@@ -232,10 +264,378 @@
         "genre": "Other"
     },
     {
-        "file_name": "Anjos De Judá - Marretaco.mp3",
+        "file_name": "Anjos De Judá - Marretaço.mp3",
         "artist": "Anjos De Judá",
-        "title": "Marretaco",
-        "album": "Anjos De Juda",
+        "title": "Marretaço",
+        "album": "Anjos De Judá",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Asaph Borba - Jesus Em Tua Presença.mp3",
+        "artist": "Asaph Borba",
+        "title": "Jesus Em Tua Presença",
+        "album": "Asaph Borba",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Avalon - Testify To Love.MP3",
+        "artist": "Avalon",
+        "title": "Testify To Love",
+        "album": "Avalon",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Banda Canal - Jeová Jiré.mp3",
+        "artist": "Banda Canal",
+        "title": "Jeová Jiré",
+        "album": "Banda Canal",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Banda Gerd - In Memorian.mp3",
+        "artist": "Banda Gerd",
+        "title": "In Memorian",
+        "album": "Banda Gerd",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Banda Gratidão - Cuidado.mp3",
+        "artist": "Banda Gratidão",
+        "title": "Cuidado",
+        "album": "Banda Gratidão",
+        "year": null,
+        "genre": "Blues"
+    },
+    {
+        "file_name": "Banda Rara - Tudo Que Eu Quis.mp3",
+        "artist": "Banda Rara",
+        "title": "Tudo Que Eu Quis",
+        "album": "Banda Rara",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Banda Sal - Viemos Te Adorar.mp3",
+        "artist": "Banda Sal",
+        "title": "Viemos Te Adorar",
+        "album": "Banda Sal",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Banda Tempus - Deixa Deus Trabalhar.mp3",
+        "artist": "Banda Tempus",
+        "title": "Deixa Deus Trabalhar",
+        "album": "Banda Tempus",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Bandazul - Louvor Mix 1.mp3",
+        "artist": "Bandazul",
+        "title": "Louvor Mix 1",
+        "album": "Bandazul",
+        "year": 2018,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Bandazul - Motivo Maior.mp3",
+        "artist": "Bandazul",
+        "title": "Motivo Maior",
+        "album": "Bandazul",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Bate Coração - Pedro Daniel.mp3",
+        "artist": "Bate Coração",
+        "title": "Pedro Daniel",
+        "album": "Bate Coração",
+        "year": 2017,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Bride - I Miss The Rain.MP3",
+        "artist": "Bride",
+        "title": "I Miss The Rain",
+        "album": "Bride",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Bruna Karla - Cicatrizes.mp3",
+        "artist": "Bruna Karla",
+        "title": "Cicatrizes",
+        "album": "Bruna Karla",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Bruna Karla - Deus É Bom Demais Pra Mim.mp3",
+        "artist": "Bruna Karla",
+        "title": "Deus É Bom Demais Pra Mim",
+        "album": "Bruna Karla",
+        "year": 2007,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Bryan Duncan - Dont'T Look Away.MP3",
+        "artist": "Bryan Duncan",
+        "title": "Dont'T Look Away",
+        "album": "Bryan Duncan",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Canção E Louvor - Ei, Naamã.mp3",
+        "artist": "Canção E Louvor",
+        "title": "Ei, Naamã",
+        "album": "Canção E Louvor",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Carlinhos Felix - Basta Querer.mp3",
+        "artist": "Carlinhos Felix",
+        "title": "Basta Querer",
+        "album": "Carlinhos Felix",
+        "year": 2015,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Catedral - Chame A Deus.mp3",
+        "artist": "Catedral",
+        "title": "Chame A Deus",
+        "album": "Catedral",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Catedral - Quando O Verão Chegar.mp3",
+        "artist": "Catedral",
+        "title": "Quando O Verão Chegar",
+        "album": "Catedral",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Cesar Menotti E Fabiano - Segura Na Mão De Deus.mp3",
+        "artist": "Cesar Menotti E Fabiano",
+        "title": "Segura Na Mão De Deus",
+        "album": "Cesar Menotti E Fabiano",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Christafari - Selah.mp3",
+        "artist": "Christafari",
+        "title": "Selah",
+        "album": "Christafari",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Cia Salt - Quero Conhecer Jesus.mp3",
+        "artist": "Cia Salt",
+        "title": "Quero Conhecer Jesus",
+        "album": "Cia Salt",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Clovis Pinho - Todos Somos Um.mp3",
+        "artist": "Clovis Pinho",
+        "title": "Todos Somos Um",
+        "album": "Clovis Pinho",
+        "year": null,
+        "genre": "Blues"
+    },
+    {
+        "file_name": "Comunidade Da Zona Sul - Não Há Deus Maior.mp3",
+        "artist": "Comunidade Da Zona Sul",
+        "title": "Não Há Deus Maior",
+        "album": "Comunidade Da Zona Sul",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Comunidade Da Zona Sul - Rompendo Em Fé.mp3",
+        "artist": "Comunidade Da Zona Sul",
+        "title": "Rompendo Em Fé",
+        "album": "Comunidade Da Zona Sul",
+        "year": 2014,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Comunidade De Nilópolis - Eu Quero É Deus.mp3",
+        "artist": "Comunidade De Nilópolis",
+        "title": "Eu Quero É Deus",
+        "album": "Comunidade De Nilópolis",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Davi Sacer - Deus De Promessas.mp3",
+        "artist": "Davi Sacer",
+        "title": "Deus De Promessas",
+        "album": "Davi Sacer",
+        "year": null,
+        "genre": "Gospel"
+    },
+    {
+        "file_name": "David Quinlan - Abra Os Olhos Do Meu Coração.mp3",
+        "artist": "David Quinlan",
+        "title": "Abra Os Olhos Do Meu Coração",
+        "album": "David Quinlan",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "David Quinlan - Essência Da Adoração.mp3",
+        "artist": "David Quinlan",
+        "title": "Essência Da Adoração",
+        "album": "David Quinlan",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "De Bem Com A Vida - Melissa.mp3",
+        "artist": "De Bem Com A Vida",
+        "title": "Melissa",
+        "album": "De Bem Com A Vida",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Denise Cerqueira - Jerusalém E Eu.mp3",
+        "artist": "Denise Cerqueira",
+        "title": "Jerusalém E Eu",
+        "album": "Denise Cerqueira",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Diante Do Trono - Eu E A Minha Casa.mp3",
+        "artist": "Diante Do Trono",
+        "title": "Eu E A Minha Casa",
+        "album": "Diante Do Trono",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Diante Do Trono - Jesus Em Tua Presença.mp3",
+        "artist": "Diante Do Trono",
+        "title": "Jesus Em Tua Presença",
+        "album": "Diante Do Trono",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Diante Do Trono - Preciso De Ti.mp3",
+        "artist": "Diante Do Trono",
+        "title": "Preciso De Ti",
+        "album": "Diante Do Trono",
+        "year": null,
+        "genre": "Blues"
+    },
+    {
+        "file_name": "Disco Praise - Pelo Sangue.mp3",
+        "artist": "Disco Praise",
+        "title": "Pelo Sangue",
+        "album": "Disco Praise",
+        "year": null,
+        "genre": "Blues"
+    },
+    {
+        "file_name": "Dj Pv - Nívea Soares - Filho Do Deus Vivo.mp3",
+        "artist": "Dj Pv",
+        "title": "Nívea Soares - Filho Do Deus Vivo",
+        "album": "Dj Pv",
+        "year": 2017,
+        "genre": "Blues"
+    },
+    {
+        "file_name": "Dj Pv - Som Da Liberdade.mp3",
+        "artist": "Dj Pv",
+        "title": "Som Da Liberdade",
+        "album": "Dj Pv",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Ed Wilson - O Que Seria Eu.mp3",
+        "artist": "Ed Wilson",
+        "title": "O Que Seria Eu",
+        "album": "Ed Wilson",
+        "year": 2018,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Ed Wilson - Te Amo Tanto.mp3",
+        "artist": "Ed Wilson",
+        "title": "Te Amo Tanto",
+        "album": "Ed Wilson",
+        "year": 2018,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Ednaldo Mendes - Pela Manhã.mp3",
+        "artist": "Ednaldo Mendes",
+        "title": "Pela Manhã",
+        "album": "Ednaldo Mendes",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Elaine De Jesus - É Demais.mp3",
+        "artist": "Elaine De Jesus",
+        "title": "É Demais",
+        "album": "Elaine De Jesus",
+        "year": null,
+        "genre": "Other"
+    },
+    {
+        "file_name": "Elaine Martins - Santificação.mp3",
+        "artist": "Elaine Martins",
+        "title": "Santificação",
+        "album": "Elaine Martins",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Fernandinho - Ainda Que A Figueira.mp3",
+        "artist": "Fernandinho",
+        "title": "Ainda Que A Figueira",
+        "album": "Fernandinho",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Fernandinho - Dancar Na Chuva.mp3",
+        "artist": "Fernandinho",
+        "title": "Dancar Na Chuva",
+        "album": "Fernandinho",
+        "year": null,
+        "genre": "Unknown Genre"
+    },
+    {
+        "file_name": "Fernandinho - Galileu.mp3",
+        "artist": "Fernandinho",
+        "title": "Galileu",
+        "album": "Fernandinho",
+        "year": 2015,
+        "genre": "Blues"
+    },
+    {
+        "file_name": "Fernandinho - Grandes Coisas.mp3",
+        "artist": "Fernandinho",
+        "title": "Grandes Coisas",
+        "album": "Fernandinho",
         "year": null,
         "genre": "Other"
     },

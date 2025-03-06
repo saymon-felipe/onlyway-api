@@ -6,12 +6,7 @@ const bodyParser = require("body-parser");
 const cors = require('cors');
 
 const usersRoute = require('./routes/users');
-const uploadMusics = require("./utils/uploadMusics");
-
-/*setTimeout(() => {
-    console.log("LOADING: Preparando para subir as músicas");
-    uploadMusics.upload();
-}, 1000)*/
+const utilsRoute = require('./routes/utils');
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -41,6 +36,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/usuarios', usersRoute);
+app.use("/utils", utilsRoute);
 
 app.use('/public', express.static('public'));
 
