@@ -78,50 +78,27 @@ let userService = {
             })      
         })
     },
-    login: function (email, password) {
+    login: function (user_id) {
         return new Promise((resolve, reject) => {
-            this.userExists(email).then((results) => {
-                if (!results.exists) {
-                    reject("Falha na autenticação");
-                } else {
-                    bcrypt.compare(password, results.user.senha, (error2, result) => {
-                        if (error2) {
-                            reject("Falha na autenticação");
-                        }
-
-                        if (result) {
-                            let token = jwt.sign({
-                                id: results.user.id,
-                                email: results.user.email,
-                                empresa: results.user.id_empresa
-                            }, 
-                            process.env.JWT_KEY,
-                            {
-                                expiresIn: "8h"
-                            })
-
-                            resolve(token);
-                        }
-
-                        reject("Falha na autenticação");
-                    });
-                }
-            }).catch((error) => {
-                reject(error);
+            let token = jwt.sign({
+                id: user_id
+            }, 
+            process.env.JWT_KEY,
+            {
+                expiresIn: "8h"
             })
+
+            resolve(token);
         })
     },
-    checkJwt: function (tokenParam) {
+    checkJwt: function (token) {
         return new Promise((resolve, reject) => {
-            let token = tokenParam.split(" ")[1];
             jwt.verify(token, process.env.JWT_KEY, (err, decoded) => {
                 if (err) {
                     reject("Token inválido");
                 } else {
                     let newToken = jwt.sign({
-                        id: decoded.id,
-                        email: decoded.email,
-                        empresa: decoded.empresa
+                        id: decoded.id
                     }, process.env.JWT_KEY, {expiresIn: "8h"});
                     resolve(newToken);
                 }

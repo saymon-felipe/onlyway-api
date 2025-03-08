@@ -70,21 +70,15 @@ router.post("/google-login", async (req, res) => {
             userId = insertedUser.insertId;
         }
 
-        let jwtToken = jwt.sign({
-            id: userId
-        }, 
-        process.env.JWT_KEY,
-        {
-            expiresIn: "8h"
-        })
-
-        let returnObj = {
-            user: userInfo,
-            token: jwtToken
-        }
-        
-        let response = functions.createResponse("Usuário autenticado com sucesso", returnObj, "POST", 200);
-        return res.status(200).send(response);
+        _usersService.login(userId).then((jwtToken) => {
+            let returnObj = {
+                user: userInfo,
+                token: jwtToken
+            }
+            
+            let response = functions.createResponse("Usuário autenticado com sucesso", returnObj, "POST", 200);
+            return res.status(200).send(response);
+        })        
     } catch (error) {
         return res.status(500).send(error);
     }
@@ -126,6 +120,15 @@ router.post("/contact", (req, res, next) => {
     })
 })
 
+router.post("/check_jwt", (req, res, next) => {
+    _usersService.checkJwt(req.body.token).then((results) => {
+        let response = functions.createResponse("Token válido e foi renovado", results, "POST", 200);
+        return res.status(200).send(response);
+    }).catch((error) => {
+        return res.status(500).send(error);
+    })
+});
+
 /*router.post("/register", (req, res, next) => {
     _usersService.register(req.body.email, req.body.name, req.body.password, req.body.company_id, req.body.token, req.body.temporary_password, req.body.salary, req.body.role, req.body.company_name).then((results) => {
         let response = functions.createResponse("Usuário criado com sucesso", results, "POST", 200);
@@ -141,18 +144,6 @@ router.post("/login", (req, res, next) => {
             jwtToken: results
         }
         let response = functions.createResponse("Usuario autenticado com sucesso", returnObj, "POST", 200);
-        return res.status(200).send(response);
-    }).catch((error) => {
-        return res.status(500).send(error);
-    })
-});
-
-router.post("/check_jwt", (req, res, next) => {
-    _usersService.checkJwt(req.body.token).then((results) => {
-        let returnObj = {
-            newToken: results
-        }
-        let response = functions.createResponse("Token válido e foi renovado", returnObj, "POST", 200);
         return res.status(200).send(response);
     }).catch((error) => {
         return res.status(500).send(error);
