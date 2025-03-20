@@ -9,7 +9,7 @@ router.post("/upload_musics/:token", async (req, res) => {
     if (!token == process.env.JWT_KEY) {
         return res.status(401).send("Não autorizado.");
     } else {
-        uploadMusics.upload(req.body.musics).then(() => {
+        uploadMusics.upload(req.body).then(() => {
             let response = functions.createResponse("Upload das músicas feito com sucesso", null, "GET", 200);
             return res.status(200).send(response);
         });
